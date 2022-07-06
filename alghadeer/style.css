@@ -1,4 +1,6 @@
-
+body {
+	margin-top: 0 !important;
+}
 
 .header {
 	
@@ -29,7 +31,7 @@
 	float: right;
     width: 50%;
     padding-top: 25px;
-    padding-right: 10%;
+    padding-right: 9%;
 	
 }
 .menue a {
@@ -56,5 +58,5 @@
     bottom: 0;
     width: 100%;
     padding-right: 17px;
-    background-color: yellow;
+    background-color: gold;
 }

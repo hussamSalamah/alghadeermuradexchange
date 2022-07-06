@@ -1,34 +1,32 @@
-body {
-	padding: 30px;
-}
+
 
 .header {
 	
 }
 
 .header .logo{
-	text-align: center;
+	
 }
 
 .header .logo img{
-	width: 250px
+	
 }
 
 .header .social {
-	text-align: left;
+	
 }
 
 .menue {
 	
-	float:right;
+	
 }
 .menue a {
-	padding-left: 10px;
+	
 	
 }
 
 .contents {
 	
-	text-align: center;
+	
 	
 }

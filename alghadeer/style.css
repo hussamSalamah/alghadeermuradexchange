@@ -47,7 +47,8 @@ body {
 	border-radius:50%;
 	width: 60px;
     text-align: center;
-	padding-top: 10px;
+	padding-top: 5px;
+	padding-top: 7px;
 }
 .exchange {
 	width: 100%;
@@ -114,9 +115,10 @@ body {
         width: 100%;;
     }
 }
+
 @media screen and (max-width: 600px) {
     .header {
-        height: 100px;
+        height: 108px;
     }
     .header .social {
         padding-left: 15px;

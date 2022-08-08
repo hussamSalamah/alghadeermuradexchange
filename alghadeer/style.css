@@ -5,6 +5,9 @@ body {
 	background-color: black;
 	color: gold;
 }
+.intro {
+	text-align: center;
+}
 .header {
     position: fixed;
     width: 100%;

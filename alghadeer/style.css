@@ -1,6 +1,10 @@
 body {
 	margin: 0;
 }
+.container {
+	background-color: black;
+	color: gold;
+}
 .header {
     position: fixed;
     width: 100%;
@@ -34,6 +38,9 @@ body {
 	margin-left: 45px;
 	color: #000;
     text-decoration: none;
+	background-color: gold;
+	font-style:bold;
+	border-radius:50%;
 }
 .exchange {
 	width: 100%;

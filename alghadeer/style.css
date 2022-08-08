@@ -70,6 +70,17 @@ body {
 .content {
     margin-bottom: 50px;
 }
+
+.content-logo{
+	text-align: center;
+    padding-bottom: 20px;
+	
+}
+
+.content-logo img{
+	width: 200px;
+}
+
 @media screen and (min-width: 800px) {
     .content {
         display: flex;
@@ -118,7 +129,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .header {
-        height: 108px;
+        height: 110px;
     }
     .header .social {
         padding-left: 15px;

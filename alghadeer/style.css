@@ -178,6 +178,9 @@ body {
 	
 	height: 300px;
 }
+.images-wrapper a{
+	text-align: center;
+}
 
 .image-container:hover img {
     transform: scale(1.1);

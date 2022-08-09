@@ -104,8 +104,8 @@ body {
 }
 @media screen and (min-width: 600px) {
     .swiper {
-        width: 600px;
-        height: 300px;
+        width: 700px;
+        height: 400px;
     }
     #branches ul {
         display: flex;
@@ -131,6 +131,7 @@ body {
 	
 	height: 400px;
 }
+
 
 @media screen and (max-width: 600px) {
     .header {
@@ -169,6 +170,9 @@ body {
     .swiper-wrapper {
         height: auto !important;
     }
+	.swiper-container img{
+		height: 300px;
+	}
 }
 .content h2 {
     margin-top: 0;
@@ -214,7 +218,7 @@ body {
     background-color: gold;
 }
 /* swiper custom style changes */
-.swiper-container {
+.swiper-container, .swiper-container2 {
     position: relative;
 }
 .swiper img {

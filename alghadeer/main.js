@@ -7,7 +7,7 @@ $(document).ready(function(){
 			disableOnInteraction: false
 		},
 
-		slidesPerView: 2,
+		slidesPerView: 1,
 		spaceBetween: 10,
 	
 		// If we need pagination

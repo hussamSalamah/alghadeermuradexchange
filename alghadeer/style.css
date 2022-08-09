@@ -213,6 +213,7 @@ body {
     bottom: 0;
     width: 100%;
     background-color: gold;
+	z-index: 99999;
 }
 /* swiper custom style changes */
 .swiper-container, .swiper-container2 {

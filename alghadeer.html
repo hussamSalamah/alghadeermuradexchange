@@ -6,10 +6,9 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 
 	<link rel=StyleSheet href="/alghadeer/style.css" type="text/css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="/alghadeer/main.js"></script>
 	<link rel="stylesheet" href="/alghadeer/font-awesome/css/font-awesome.min.css" />
 </head>
@@ -39,7 +38,7 @@
 			<div class="exchange bottom">
 
 				<!-- Forex Rates Ticker Script - EXCHANGERATEWIDGET.COM -->
-				<div style="background-color:#fecf29;height:30px;line-height:26px;color:#0F0E0E;">
+				<div style="background-color:gold;height:30px;line-height:26px;color:#0F0E0E;">
 					<script type="text/javascript"
 						src="https://www.exchangeratewidget.com/converter.php?l=en&f=USD&t=USDEUR,USDGBP,USDILS,JODILS,&a=1&d=D4F20E&n=FFFFFF&o=0F0E0E&v=12"></script>
 				</div>
@@ -101,23 +100,28 @@
 
 					</p>
 				</div>
-				<!-- <div class="slider">
-					<div class="slide">
-						<img src="https://placehold.jp/150x150.png" alt="" class="img-responsive" />
+				<!-- Slider main container -->
+				<div class="swiper-container">
+				<div class="swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel1.jpg" alt="" class="img-responsive" /></div>
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel2.jpg" alt="" class="img-responsive" /></div>
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel3.jpg" alt="" class="img-responsive" /></div>
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel4.jpg" alt="" class="img-responsive" /></div>
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel5.jpg" alt="" class="img-responsive" /></div>
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel6.jpg" alt="" class="img-responsive" /></div>
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel7.jpg" alt="" class="img-responsive" /></div>
+						<div class="swiper-slide"><img src="/alghadeer/images/carousel8.jpg" alt="" class="img-responsive" /></div>
 					</div>
-					<div class="slide">
-						<img src="https://placehold.jp/150x150.png" alt="" class="img-responsive" />
-					</div>
-					<div class="slide">
-						<img src="https://placehold.jp/150x150.png" alt="" class="img-responsive" />
-					</div>
-					<div class="slide">
-						<img src="https://placehold.jp/150x150.png" alt="" class="img-responsive" />
-					</div>
-					<div class="slide">
-						<img src="https://placehold.jp/150x150.png" alt="" class="img-responsive" />
-					</div>
-				</div> -->
+				</div>
+					<!-- If we need scrollbar -->
+					<div class="swiper-scrollbar"></div>
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+			</div>
 				</div>
 			<div id="services" class="content">
 				<div class="content-text">

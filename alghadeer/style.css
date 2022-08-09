@@ -65,7 +65,7 @@ body {
     width: 80%;
     font-size: 22px;
     margin: 0 auto;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 .content {
     margin-bottom: 50px;
@@ -94,9 +94,6 @@ body {
         padding-left: 40px;
 		padding-right: 30px;
     }
-    .wrapper {
-        width: 40%;
-    }
 }
 #partners .images-wrapper div {
     padding: 0 20px;
@@ -106,6 +103,10 @@ body {
     width: 100%;
 }
 @media screen and (min-width: 600px) {
+    .swiper {
+        width: 600px;
+        height: 300px;
+    }
     #branches ul {
         display: flex;
         justify-content: space-between;
@@ -158,6 +159,12 @@ body {
     .header .logo img{
         width: 100%;
     }
+    .swiper-slide {
+        height: auto !important;
+    }
+    .swiper-wrapper {
+        height: auto !important;
+    }
 }
 .content h2 {
     margin-top: 0;
@@ -191,36 +198,29 @@ body {
 	position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #fecf29;
+    background-color: gold;
 }
-/* .slick-initialized .slick-slide {
-    height: auto;
-    display: block;
+/* swiper custom style changes */
+.swiper-container {
+    position: relative;
 }
-.wrapper {
-    padding-top: 20px;
+.swiper img {
+    width:100%;
 }
-.slick-slide {
-    margin: 0 10px;
+.swiper-container .swiper-button-next {
+    right: -40px;
 }
-.slick-slide img {
-    width: 100%;
+.swiper-container .swiper-button-prev {
+    left: -40px;
 }
-.wrapper .slick-dots li button:before {
-    color: #000;
-} */
-.slick-prev:before, 
-.slick-next:before {
-    color: #000 !important;
+.swiper-container .swiper-button-prev::after,
+.swiper-container .swiper-button-next::after {
+    font-size: 20px;
+    color: gold;
 }
-
-.slider{
-    width:400px;
-    margin:20px auto;
-    text-align: center;
-    padding:20px;
-  }
-  .slider img {
-    display: block;
-    margin:auto;
-  }
+.swiper-container .swiper-scrollbar-drag {
+    background: gold;
+}
+.swiper-container .swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: -15px;
+}

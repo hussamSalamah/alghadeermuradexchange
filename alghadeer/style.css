@@ -173,6 +173,12 @@ body {
 .content h2 {
     margin-top: 0;
 }
+
+.swiper-container img{
+	
+	height: 300px;
+}
+
 .image-container:hover img {
     transform: scale(1.1);
     transition: all .3s ease-in-out;

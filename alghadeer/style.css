@@ -127,6 +127,10 @@ body {
         width: 100%;;
     }
 }
+.swiper-container img{
+	
+	height: 400px;
+}
 
 @media screen and (max-width: 600px) {
     .header {

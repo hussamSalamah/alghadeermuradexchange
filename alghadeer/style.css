@@ -126,20 +126,21 @@ body {
     .image-container img {
         width: 100%;;
     }
-	.mission {
+	#mission {
 		display: inline-block;
 	}
-	.vision {
+	#vision {
 		display: inline-block;
 	}
 }
+
 .swiper-container img{
 	
 	height: 400px;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
     .header {
         height: 110px;
     }

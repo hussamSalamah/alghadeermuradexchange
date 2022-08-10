@@ -265,3 +265,8 @@ body {
 .swiper-container .swiper-scrollbar.swiper-scrollbar-horizontal {
     bottom: -15px;
 }
+
+#partners .images-wrapper {text-align: center;}
+#partners .images-wrapper img {
+	width: 190px;
+}

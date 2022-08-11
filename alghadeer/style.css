@@ -95,6 +95,7 @@ body {
         padding-left: 40px;
 		padding-right: 30px;
     }
+	.mobile {display: none;}
 }
 #partners .images-wrapper div {
     padding: 0 20px;
@@ -126,6 +127,8 @@ body {
 	#vision img {
 		margin-right: 20%;
 	}
+	
+	.desktop {display: none;}
 	
 }
 

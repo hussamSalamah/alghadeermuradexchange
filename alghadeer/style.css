@@ -58,6 +58,7 @@ body {
 }
 #services img {
     width: 200px;
+	margin-top:17%;
 }
 .contents {
     padding-top: 150px;
@@ -113,6 +114,17 @@ body {
 	}
 	#vision {
 		display: inline-block;
+	}
+	#branches {
+		text-align: center;
+	}
+	.content h2 {
+		text-align: center;
+		margin-top: 10px;
+	}
+	
+	#vision img {
+		margin-right: 20%;
 	}
 	
 }
@@ -194,6 +206,9 @@ body {
         width: 260;
         height: 400px;
     }
+	#services img {
+		margin-right: 20%;
+	}
 }
 
 

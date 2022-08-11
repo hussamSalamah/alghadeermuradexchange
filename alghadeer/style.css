@@ -288,3 +288,9 @@ body {
 #partners .images-wrapper img {
 	width: 190px;
 }
+
+#designedBy {
+	font-size: 15px;
+    float: left;
+    margin-bottom: 10px;
+}

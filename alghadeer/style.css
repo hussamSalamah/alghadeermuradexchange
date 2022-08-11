@@ -84,7 +84,8 @@ body {
 
 
 
-@media screen and (min-width: 820px) {
+
+@media screen and (min-width: 821px) {
     .content {
         display: flex;
         justify-content: space-between;
@@ -107,7 +108,7 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 821px) {
 	.swiper {
         width: 400px;
         height: 400px;

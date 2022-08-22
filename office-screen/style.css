@@ -1,9 +1,9 @@
-		body {font-size:20px;margin:0px;}
+body {font-size:20px;margin:0px;}
 		.main-container {width: 100%;margin:0px auto;}
 		.top-container { display:flex; max-height: calc( 100% - 87px);height: 100%;}
-		.main-image { text-align:right;}
-		.main-image img { max-width:100%;max-height:100%;}
-		.right-side {width : 300px;  }
+		.main-image { text-align:right; width:calc( 100% - 300px)}
+		.main-image img { max-width:100%;max-height:100%;width: 100%;}
+		.right-side {width : 300px; background-color:gold; }
 		.date-section {padding:10px; background-color:black;color:white;}
 		.date-section .date {display:inline-block; vertical-align:top;float:left;}
 		.date-section .date.day {float:right;}

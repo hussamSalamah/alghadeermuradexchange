@@ -1,0 +1,125 @@
+<html dir="rtl" lang="ar">
+
+<head></head>
+<body onload="setValues()" style="text-align:center;">
+
+<img src="/alghadeer/images/logo.png"></a>
+
+</br>
+</br>
+<div id="log-in">
+
+المستخدم:  <input id="name" value=""/>
+</br>
+</br>
+كلمة المرور:  <input id="password" value=""/>
+</br>
+</br>
+
+<button onclick="login();">دخول</button>
+</br>
+<label id="log-in-error" style="color:red"></label>
+</div>
+
+<div id="cur-form" style="display:none;">
+<p>اسعار صرف العملات لهذا اليوم </p>
+</br>
+<p>الرجاء تعبئة قيم التحويل في الخانات المدرجة</p>
+
+سعر صرف دولار /شيقل
+</br>
+شراء: <input id="usd-ils" value=""/>  بيع: <input id="ils-usd" value=""/> 
+</br>
+</br>
+سعر صرف دينار /شيقل
+</br>
+شراء: <input id="jod-ils" value=""/>  بيع: <input id="ils-jod" value=""/> 
+</br>
+</br>
+سعر صرف يورو /شيقل
+</br>
+شراء: <input id="eu-ils" value=""/>  بيع: <input id="ils-eu" value=""/> 
+</br>
+</br>
+سعر صرف دولار /دينار
+</br>
+شراء: <input id="usd-jod" value=""/>  بيع: <input id="jod-usd" value=""/> 
+</br>
+</br>
+سعر صرف دولار /يورو
+</br>
+شراء: <input id="usd-eu" value=""/>  بيع: <input id="eu-usd" value=""/> 
+</br>
+</br>
+<button onclick="copyNewURL()">شارك الرابط مع افرع الغدير</button>
+</br>
+<textarea id="out-url" rows="3" cols="50">
+</textarea>
+
+</div>
+</body>
+<script>
+
+function GetURLParameter(sParam){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+function setValues(){
+	document.getElementById("usd-ils").value = GetURLParameter("usdToils");
+}
+
+function copyNewURL(){
+	var originUrl = 'file:///C:/Users/HusamSalameh/Desktop/test22.html';
+	var usdToils = document.getElementById("usd-ils").value;
+	var ilsTousd = document.getElementById("ils-usd").value;
+	var jodToils = document.getElementById("jod-ils").value;
+	var ilsTojod = document.getElementById("ils-jod").value;
+	var euToils = document.getElementById("eu-ils").value;
+	var ilsToeu = document.getElementById("ils-eu").value;
+	var usdTojod = document.getElementById("usd-jod").value;
+	var jodTousd = document.getElementById("jod-usd").value;
+	var euTousd = document.getElementById("eu-usd").value;
+	var usdToeu = document.getElementById("usd-eu").value;
+	
+	
+	var newUrl = originUrl + "?usdToils="+usdToils + "&ilsTousd="+ilsTousd+"&jodToils="+jodToils+"&ilsTojod="+ilsTojod+"&euToils="+euToils+
+	"&ilsToeu="+ilsToeu+
+	"&usdTojod="+usdTojod+
+	"&jodTousd="+jodTousd+
+	"&euTousd="+euTousd+
+	"&usdToeu="+usdToeu;
+	
+	document.getElementById("out-url").value = newUrl
+	var outputUrl = document.getElementById("out-url");
+	outputUrl.select();
+	document.execCommand("copy");
+	
+	
+}
+
+function login() {
+
+var name = document.getElementById("name").value;
+var pass = document.getElementById("password").value;
+
+if (name === 'admin' && pass === 'admin123') {
+	document.getElementById("log-in").style = "display: none;"
+	document.getElementById("cur-form").style = "display: block;"	
+} else {
+
+	var msg = "الرجاء التأكد من اسم المستخدم وكلمة المرور"
+	document.getElementById("log-in-error").textContent = msg;
+}
+
+}
+</script>
+
+</html>

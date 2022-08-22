@@ -87,7 +87,7 @@ function copyNewURL(){
 	var outputUrl = document.getElementById("out-url");
 	outputUrl.select();
 	document.execCommand("copy");
-	var toSend = newUrl.replace("&", "%3D");
+	var toSend = newUrl.replaceAll("&", "%26");
 	window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ toSend);
 	
 	

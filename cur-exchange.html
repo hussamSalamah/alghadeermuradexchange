@@ -1,7 +1,9 @@
 <html dir="rtl" lang="ar">
 
-<head></head>
-<body onload="setValues()" style="text-align:center;">
+<head>
+
+</head>
+<body  style="text-align:center;">
 
 <img src="/alghadeer/images/logo.png"></a>
 
@@ -60,24 +62,8 @@
 </body>
 <script>
 
-function GetURLParameter(sParam){
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
-            return sParameterName[1];
-        }
-    }
-}
-function setValues(){
-	document.getElementById("usd-ils").value = GetURLParameter("usdToils");
-}
-
 function copyNewURL(){
-	var originUrl = 'file:///C:/Users/HusamSalameh/Desktop/test22.html';
+	var originUrl = 'https://alfahim-group.com/office-screen/office-screen.html';
 	var usdToils = document.getElementById("usd-ils").value;
 	var ilsTousd = document.getElementById("ils-usd").value;
 	var jodToils = document.getElementById("jod-ils").value;
@@ -101,6 +87,7 @@ function copyNewURL(){
 	var outputUrl = document.getElementById("out-url");
 	outputUrl.select();
 	document.execCommand("copy");
+	window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ newUrl);
 	
 	
 }

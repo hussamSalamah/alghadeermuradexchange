@@ -60,11 +60,16 @@
 </textarea>
 <br>
 <br>
-<a id="refTowatch" target="_blank" href="#">معاينة قبل ارسال الايميل</a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<button onclick="sendByemail()">ارسل بالايميل</button>
+<div id="actions" style="display:none;">
+	<a id="refTowatch" target="_blank" href="#">معاينة قبل ارسال الايميل</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="sendByemail()">ارسل بالايميل</button>
+	<br>
+	<br>
 
+</div>
 
+<button onclick="window.location.reload();">خروج</button>
 
 </div>
 </body>
@@ -96,6 +101,7 @@ function copyNewURL(){
 	outputUrl.select();
 	document.execCommand("copy");
 	document.getElementById("refTowatch").href = newUrl;
+	document.getElementById("actions").style="display=block;"
 	
 	
 	
@@ -107,22 +113,7 @@ var toSend = outUrl.replaceAll("&", "%26");
 window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ toSend);
 
 }
-
-function login() {
-
-var name = document.getElementById("name").value;
-var pass = document.getElementById("password").value;
-
-if (name === 'admin' && pass === 'admin123') {
-	document.getElementById("log-in").style = "display: none;"
-	document.getElementById("cur-form").style = "display: block;"	
-} else {
-
-	var msg = "الرجاء التأكد من اسم المستخدم وكلمة المرور"
-	document.getElementById("log-in-error").textContent = msg;
-}
-
-}
+function login(){var e=document.getElementById("name").value,n=document.getElementById("password").value;if("admin"===e&&"admin123"===n)document.getElementById("log-in").style="display: none;",document.getElementById("cur-form").style="display: block;";else{document.getElementById("log-in-error").textContent="الرجاء التأكد من اسم المستخدم وكلمة المرور"}}
 </script>
 
 </html>

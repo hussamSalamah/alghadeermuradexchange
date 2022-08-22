@@ -87,7 +87,8 @@ function copyNewURL(){
 	var outputUrl = document.getElementById("out-url");
 	outputUrl.select();
 	document.execCommand("copy");
-	window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ newUrl);
+	var toSend = newUrl.replace("&", "%3D");
+	window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ toSend);
 	
 	
 }

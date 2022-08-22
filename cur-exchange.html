@@ -14,7 +14,7 @@
 المستخدم:  <input id="name" value=""/>
 </br>
 </br>
-كلمة المرور:  <input id="password" value=""/>
+كلمة المرور:  <input type="password" id="password" value=""/>
 </br>
 </br>
 
@@ -53,10 +53,18 @@
 شراء: <input id="usd-eu" value=""/>  بيع: <input id="eu-usd" value=""/> 
 </br>
 </br>
-<button onclick="copyNewURL()">شارك الرابط مع افرع الغدير</button>
+<button onclick="copyNewURL()">معالجة البيانات</button>
+</br>
 </br>
 <textarea id="out-url" rows="3" cols="50">
 </textarea>
+<br>
+<br>
+<a id="refTowatch" target="_blank" href="#">معاينة قبل ارسال الايميل</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="sendByemail()">ارسل بالايميل</button>
+
+
 
 </div>
 </body>
@@ -87,10 +95,17 @@ function copyNewURL(){
 	var outputUrl = document.getElementById("out-url");
 	outputUrl.select();
 	document.execCommand("copy");
-	var toSend = newUrl.replaceAll("&", "%26");
-	window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ toSend);
+	document.getElementById("refTowatch").href = newUrl;
 	
 	
+	
+}
+
+function sendByemail(){
+var outUrl = document.getElementById("out-url").value;
+var toSend = outUrl.replaceAll("&", "%26");
+window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ toSend);
+
 }
 
 function login() {

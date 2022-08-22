@@ -13,7 +13,7 @@
 		<div class="right-side">
 			<div class="date-section">
 				<div class="date day"> الاثنين</div>
-				<div class="date"> 23\11\2020</div>
+				<div class="date" id="date"> </div>
 				<div class="clear"></div>
 			</div>
 			<div class="yellow-section">
@@ -29,7 +29,7 @@
 				
 				<table class="price-table">
 					<tr class="table-head">
-						<td>شراء</td><td>بيع</td><td>العملة</td>
+						<td>شراء</td><td>بيع</td><td style="border-color:black;">العملة</td>
 					</tr>
 					<tr class="table-body"><td>3.4800</td><td>3.4400</td><td>دولار-شيكل</td> </tr>
 					<tr class="table-body"><td>4.9150</td><td>4.8550</td><td>دينار-شيكل</td> </tr>
@@ -43,20 +43,25 @@
 			</div>
 		</div>
 
-	</div>
+	
 	<div class="bottom-container">
 		<div class="time" id="time">
 
 		</div>
-		<div class="news">تفضلوا بزيارتنا في شبكة الغدير كل يوم من الساعة التاسعة صباحا وحتى الساعة التاسعة ليلا</div>
+		<div class="news"> 
+		<div class="marquee">تفضلوا بزيارتنا في شبكة الغدير كل يوم من الساعة 9:00 صباحا وحتى ال 9:00 مساء واهلا وسهلا بكم</div></div>
 		<div class="clear"></div>
 	</div>
-
+</div>
 </div>
 
 </body>
 
 	<script type="text/javascript">
+	
+		var today = new Date();
+		var date = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear()
+		document.getElementById("date").innerHTML = date;
 	
 		function display_c(){
 			var refresh=60000; // Refresh rate in milli seconds

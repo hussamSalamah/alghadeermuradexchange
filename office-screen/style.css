@@ -1,11 +1,11 @@
-body {font-size:20px;margin:0px;}
+		body {font-size:20px;margin:0px;}
 		.main-container {width: 100%;margin:0px auto;}
 		.top-container { display:flex; max-height: calc( 100% - 87px);height: 100%;}
 		.main-image { text-align:right; width:calc( 100% - 300px)}
 		.main-image img { max-width:100%;max-height:100%;width: 100%;}
 		.right-side {width : 300px; background-color:gold; }
 		.date-section {padding:10px; background-color:black;color:white;}
-		.date-section .date {display:inline-block; vertical-align:top;float:left;}
+		.date-section .date {display:inline-block; vertical-align:top;float:left;font-weight:bold;}
 		.date-section .date.day {float:right;}
 		.clear {clear:both;} 
 		
@@ -13,15 +13,18 @@ body {font-size:20px;margin:0px;}
 		.head { text-align:center;border-bottom:2px solid black;padding-bottom:10px;}
 		.branches span {padding: 5px; background-color:black; color:white;display:inline-block;}
 		.bottom-container .time {position:absolute;bottom:0; right:0;z-index:99999;float:right; padding:20px 30px; background-color:black; color:white;font-size:40px;}
-		.bottom-container {background-color:red;position:relative;overflow:hidden;}
-		.bottom-container .news {font-size: 40px;overflow: hidden;background-color: red;color: white;text-align: right;white-space: nowrap;padding: 20px; -webkit-animation: scrolling-left1 30s linear infinite;	animation: scrolling-left1 30s linear infinite;}
+		.bottom-container {background-color:red;position:relative;overflow:hidden;   height: 87px;}
+		.bottom-container .news {position: absolute; left: 0;  bottom: 0;direction:rtl;font-size: 40px;overflow: hidden;background-color: red;color: white;text-align: right;padding: 20px 40px; -webkit-animation: scrolling-left1 20s linear infinite;
+  animation: scrolling-left1 20s linear infinite;}
+		.bottom-container .news .marquee {white-space: nowrap;}
+	
+		@keyframes scrolling-left1 {
+    0% {transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);}
+      100% {transform: translateX(100%);
+          -webkit-transform: translateX(100%);}
+}
 		
-		@-webkit-keyframes scrolling-left1 {
-			0% {-webkit-transform: translateX(-100%);}
-			100% {-webkit-transform: translateX(100%);}
-		}
-		
-		
-		.price-table {margin: 0 auto;border-collapse: collapse;}
+		.price-table {margin: 0 auto;border-collapse: collapse;width: 100%;    text-align: center;border-left: 2px solid black;}
 		.price-table .table-head td {background-color:black; color:white;  font-weight:bold; padding:10px 20px;border-right: 1px solid white;}
-		.price-table .table-body td {background-color:white; color:bold;  font-weight:bold; padding:10px;border-right: 1px solid black;border-bottom:1px solid black;}
+		.price-table .table-body td {background-color:white; color:bold;  font-weight:bold; padding:10px;border-right: 2px solid black;border-bottom:2px solid black;}

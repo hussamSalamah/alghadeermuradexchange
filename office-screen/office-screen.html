@@ -12,7 +12,7 @@
 		<div class="main-image"><img src='assets/main-img.png'></div>
 		<div class="right-side">
 			<div class="date-section">
-				<div class="date day"> الاثنين</div>
+				<div class="date day" id="today"> الاثنين</div>
 				<div class="date" id="date"> </div>
 				<div class="clear"></div>
 			</div>
@@ -31,11 +31,11 @@
 					<tr class="table-head">
 						<td>شراء</td><td>بيع</td><td style="border-color:black;">العملة</td>
 					</tr>
-					<tr class="table-body"><td>3.4800</td><td>3.4400</td><td>دولار-شيكل</td> </tr>
-					<tr class="table-body"><td>4.9150</td><td>4.8550</td><td>دينار-شيكل</td> </tr>
-					<tr class="table-body"><td>3.8750</td><td>3.8350</td><td>يورو-شيكل</td> </tr>
-					<tr class="table-body"><td>0.7015</td><td>0.7075</td><td>دولار-دينار</td> </tr>
-					<tr class="table-body"><td>0.7015</td><td>0.7075</td><td>يورو-دولار</td> </tr>
+					<tr class="table-body"><td><p id="usdToils" class="exch-price">3.4800</p></td><td><p id="ilsTousd" class="exch-price">3.4400</p></td><td>دولار-شيكل</td> </tr>
+					<tr class="table-body"><td><p id="jodToils" class="exch-price">4.9150</p></td><td><p id="ilsTojod" class="exch-price">4.8550</p></td><td>دينار-شيكل</td> </tr>
+					<tr class="table-body"><td><p id="euToils" class="exch-price">3.8750</p></td><td><p id="ilsToeu" class="exch-price">3.8350</p></td><td>يورو-شيكل</td> </tr>
+					<tr class="table-body"><td><p id="usdTojod" class="exch-price">0.7015</p></td><td><p id="jodTousd" class="exch-price">0.7075</p></td><td>دولار-دينار</td> </tr>
+					<tr class="table-body"><td><p id="usdToeu" class="exch-price">0.7015</p></td><td><p id="euTousd" class="exch-price">0.7075</p></td><td>يورو-دولار</td> </tr>
 						
 								
 				</table>
@@ -62,10 +62,13 @@
 		var today = new Date();
 		var date = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear()
 		document.getElementById("date").innerHTML = date;
+		const weekday = ["الاحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعة","السبت"];
+		document.getElementById("today").innerHTML = weekday[today.getDay()];
 	
 		function display_c(){
 			var refresh=60000; // Refresh rate in milli seconds
 			mytime=setTimeout('display_ct()',refresh)
+			setValues();
 		}
 		
 		function display_ct() {
@@ -73,6 +76,32 @@
 			var time = today.getHours() + ":" + today.getMinutes()
 			document.getElementById("time").innerHTML = time;
 			display_c();
+		}
+		
+		function GetURLParameter(sParam){
+			var sPageURL = window.location.search.substring(1);
+			var sURLVariables = sPageURL.split('&');
+			for (var i = 0; i < sURLVariables.length; i++) 
+			{
+				var sParameterName = sURLVariables[i].split('=');
+				if (sParameterName[0] == sParam) 
+				{
+					return sParameterName[1];
+				}
+			}
+		}
+		
+		function setValues(){
+			document.getElementById("usdToils").value = GetURLParameter("usdToils");
+			document.getElementById("ilsTousd").value = GetURLParameter("ilsTousd");
+			document.getElementById("jodToils").value = GetURLParameter("jodToils");
+			document.getElementById("ilsTojod").value = GetURLParameter("ilsTojod");
+			document.getElementById("euToils").value = GetURLParameter("euToils");
+			document.getElementById("ilsToeu").value = GetURLParameter("ilsToeu");
+			document.getElementById("usdTojod").value = GetURLParameter("usdTojod");
+			document.getElementById("jodTousd").value = GetURLParameter("jodTousd");
+			document.getElementById("usdToeu").value = GetURLParameter("usdToeu");
+			document.getElementById("euTousd").value = GetURLParameter("euTousd");
 		}
 
 			

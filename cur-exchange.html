@@ -30,27 +30,27 @@
 
 سعر صرف دولار /شيقل
 </br>
-شراء: <input id="usd-ils" value=""/>  بيع: <input id="ils-usd" value=""/> 
+ بيع: <input id="ils-usd" value=""/> شراء: <input id="usd-ils" value=""/> 
 </br>
 </br>
 سعر صرف دينار /شيقل
 </br>
-شراء: <input id="jod-ils" value=""/>  بيع: <input id="ils-jod" value=""/> 
+  بيع: <input id="ils-jod" value=""/> شراء: <input id="jod-ils" value=""/>
 </br>
 </br>
 سعر صرف يورو /شيقل
 </br>
-شراء: <input id="eu-ils" value=""/>  بيع: <input id="ils-eu" value=""/> 
+  بيع: <input id="ils-eu" value=""/> شراء: <input id="eu-ils" value=""/>
 </br>
 </br>
 سعر صرف دولار /دينار
 </br>
-شراء: <input id="usd-jod" value=""/>  بيع: <input id="jod-usd" value=""/> 
+ بيع: <input id="jod-usd" value=""/> شراء: <input id="usd-jod" value=""/> 
 </br>
 </br>
 سعر صرف دولار /يورو
 </br>
-شراء: <input id="usd-eu" value=""/>  بيع: <input id="eu-usd" value=""/> 
+ بيع: <input id="eu-usd" value=""/> شراء: <input id="usd-eu" value=""/> 
 </br>
 </br>
 <button onclick="copyNewURL()">معالجة البيانات</button>
@@ -74,19 +74,43 @@
 </div>
 </body>
 <script>
+function getDataFromCookie(){
 
+	document.getElementById("usd-ils").value = getCookie('usd-ils');
+	document.getElementById("ils-usd").value = getCookie('ils-usd');
+	document.getElementById("jod-ils").value = getCookie('jod-ils');
+	document.getElementById("ils-jod").value = getCookie('ils-jod');
+	document.getElementById("eu-ils").value = getCookie('eu-ils');
+	document.getElementById("ils-eu").value = getCookie('ils-eu');
+	document.getElementById("usd-jod").value = getCookie('usd-jod');
+	document.getElementById("jod-usd").value = getCookie('jod-usd');
+	document.getElementById("eu-usd").value = getCookie('eu-usd');
+	document.getElementById("usd-eu").value = getCookie('usd-eu');
+
+
+}
 function copyNewURL(){
 	var originUrl = 'https://alfahim-group.com/office-screen/office-screen.html';
 	var usdToils = document.getElementById("usd-ils").value;
+	setCookie("usd-ils", usdToils);
 	var ilsTousd = document.getElementById("ils-usd").value;
+	setCookie("ils-usd", ilsTousd);
 	var jodToils = document.getElementById("jod-ils").value;
+	setCookie("jod-ils", jodToils);
 	var ilsTojod = document.getElementById("ils-jod").value;
+	setCookie("ils-jod", ilsTojod);
 	var euToils = document.getElementById("eu-ils").value;
+	setCookie("u-ils", euToils);
 	var ilsToeu = document.getElementById("ils-eu").value;
+	setCookie("ils-eu", ilsToeu);
 	var usdTojod = document.getElementById("usd-jod").value;
+	setCookie("usd-jod", usdTojod);
 	var jodTousd = document.getElementById("jod-usd").value;
+	setCookie("jod-usd", jodTousd);
 	var euTousd = document.getElementById("eu-usd").value;
+	setCookie("eu-usd", euTousd);
 	var usdToeu = document.getElementById("usd-eu").value;
+	setCookie("usd-eu", usdToeu);
 	
 	
 	var newUrl = originUrl + "?usdToils="+usdToils + "&ilsTousd="+ilsTousd+"&jodToils="+jodToils+"&ilsTojod="+ilsTojod+"&euToils="+euToils+
@@ -114,6 +138,31 @@ window.open('mailto:ghadeermurad2022@gmail.com?subject=exchange-rate&body='+ toS
 
 }
 function login(){var e=document.getElementById("name").value,n=document.getElementById("password").value;if("admin"===e&&"admin123"===n)document.getElementById("log-in").style="display: none;",document.getElementById("cur-form").style="display: block;";else{document.getElementById("log-in-error").textContent="الرجاء التأكد من اسم المستخدم وكلمة المرور"}}
+
+
+function setCookie(cname, cvalue) {
+  const d = new Date();
+  d.setTime(d.getTime() + (180*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
 </script>
 
 </html>

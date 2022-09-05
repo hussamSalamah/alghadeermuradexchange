@@ -3,7 +3,7 @@ body {
 }
 .container {
 	background-color: black;
-	color: gold;
+	color: #F2D80F;
 }
 .intro {
 	text-align: center;
@@ -42,7 +42,7 @@ body {
 	margin-left: 45px;
 	color: #000;
     text-decoration: none;
-	background-color: gold;
+	background-color: #F2D80F;
 	font-weight: bold;
 	border-radius:50%;
 	width: 60px;
@@ -265,7 +265,7 @@ body {
 	position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: gold;
+    background-color: #F2D80F;
 	z-index: 99999;
 }
 /* swiper custom style changes */
@@ -284,10 +284,10 @@ body {
 .swiper-container .swiper-button-prev::after,
 .swiper-container .swiper-button-next::after {
     font-size: 20px;
-    color: gold;
+    color: #F2D80F;
 }
 .swiper-container .swiper-scrollbar-drag {
-    background: gold;
+    background: #F2D80F;
 }
 .swiper-container .swiper-scrollbar.swiper-scrollbar-horizontal {
     bottom: -15px;

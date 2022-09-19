@@ -304,6 +304,7 @@ body {
 }
 
 .menu.en a {
+	margin-left: 5px;
     color: #000;
     text-decoration: none;
     background-color: #F2D80F;

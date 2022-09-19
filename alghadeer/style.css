@@ -303,3 +303,16 @@ body {
     float: left;
     margin-bottom: 10px;
 }
+
+.menu.en a {
+    margin-left: 45px;
+    color: #000;
+    text-decoration: none;
+    background-color: #F2D80F;
+    font-weight: bold;
+    border-radius: 100%;
+    width: 75px;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 2px;
+}

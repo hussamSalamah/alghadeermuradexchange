@@ -38,7 +38,7 @@
 							src="/alghadeer/images/insta6.png"></a>
 					
 					<div class="lang">
-						<a href="javascript:void(0);" onclick="">En </a>|<a href="javascript:void(0);" onclick=""> Ar</a>
+						<a href="javascript:void(0);" onclick="displayEn();"> En </a>|<a href="javascript:void(0);" onclick="displayAr();"> Ar </a>
 					</div>
 
 				</div>
@@ -64,7 +64,7 @@
 			
 			</div>
 			<div id="vision" class="content">
-				<div class="content-text">
+				<div class="content-text ar">
 					<h2>من نحن</h2>
 					<p>
 						تأسست شركة <label id=”comp-name”>الغدير للصرافة - مراد </label>عام 1991م بعد عودة السيد أحمد محمد إبداح إلى
@@ -79,6 +79,15 @@
 
 					</p>
 				</div>
+				<div class="content-text en" style="display:none">
+					<h2>Who We Are</h2>
+					<p>
+						Al-Ghadeer Exchange Company - Murad was established in 1991 AD after the return of Mr. Ahmed Muhammad Ibdah to the land of Palestine, after a 20-year journey of expatriation and business that included many countries in the world, starting with the Republic of Iraq and then the State of Kuwait and ending in Venezuela.
+						Where the company began its work in 1991 in local exchange operations within a limited scope until 2003, then the company's local exchange base was expanded in 2003 to include the opening of a new branch of Al-Ghadeer Exchange in Nablus Governorate,
+						then the company's development work began with confident steps to buy a company Azrel Exchange and merging it with Al Ghadeer Exchange Company to become a unified company under the name Al Ghadeer Exchange Company - Murad. Today, after many transformations, the company operates in the State of Palestine within many branches throughout the country, through which it aims to provide the most efficient and effective global exchange services.
+
+					</p>
+				</div>
 				<div class="image-container">
 					<img src="/alghadeer/images/money1.jpg">
 				</div>
@@ -87,20 +96,34 @@
 				<div class="image-container">
 					<img src="/alghadeer/images/money2.webp">
 				</div>
-				<div class="content-text">
+				<div class="content-text ar">
 					<h2>رسالتنا</h2>
 					<p>
 						تقديم أفضل الخدمات الصيرفية وفق أسس مهنية عالية من خلال كادر توظيفي مؤهل يمتلك الكفاءة والمهارة والدقة ويتصف بالأمانة والنزاهة والصدق المتناهي.
+					</p>
+				</div>
+				<div class="content-text en" style="display:none;">
+					<h2>Our message</h2>
+					<p>
+						
+						Providing the best banking services according to high professional foundations through a qualified recruitment cadre who possesses competence, skill and accuracy and is characterized by honesty, integrity and utmost honesty.
 					</p>
 				</div>
 				
 			</div>
 
 			<div id="mission" class="content">
-				<div class="content-text">
+				<div class="content-text ar">
 					<h2>رؤية الشركة</h2>
 					<p>
 						أن تحقق الإنتشار الكافي لخدمة أبناء الشعب الفلسطيني في الوطن والخارج من خلال شبكة فروع حديثة وحلول وخدمات تقنية متطورة.
+
+					</p>
+				</div>
+				<div class="content-text en" style="display:none;">
+					<h2>Company vision</h2>
+					<p>
+						To achieve sufficient spread to serve the Palestinian people at home and abroad through a network of modern branches and advanced technical solutions and services.
 
 					</p>
 				</div>
@@ -128,7 +151,7 @@
 			</div>
 				</div>
 			<div id="services" class="content">
-				<div class="content-text">
+				<div class="content-text ar">
 					<h2>خدماتنا</h2>
 					
 					<ul>
@@ -139,20 +162,32 @@
 						<li>صرافة الشيكات بمختلفِ أنواعها .</li>
 					</ul>
 				</div>
+				<div class="content-text en" style="display:none;">
+					<h2>Services</h2>
+					
+					<ul>
+						<li>Exchange services (transfer and exchange of currencies) local and foreign of all kinds, monetary and banking.</li>
+						<li>Immediate transfers (for parents, students and merchants) within minutes through a network of correspondents in the Arab countries and the world.</li>
+						<li>Western Union Transfers.</li>
+						<li>Cashing of checks of all kinds.</li>
+					</ul>
+				</div>
 				<img src="/alghadeer/images/WestrenUnion.jpg">
 			</div>
-			<div id="branches">
-				<h2>فروعنا</h2>
-				
+			<div class="ar" id="branches">
+				<h2 class="ar">فروعنا</h2>
+				<h2 class="en" style="display:none;">Our Branches</h2>
 				<ul>
 					<li>
 						<!-- <img src="/alghadeer/images/testImg.png"> -->
-						<p><i class="fa fa-map-marker" aria-hidden="true"></i>نابلس</p>
+						<p class="ar"><i class="fa fa-map-marker" aria-hidden="true"></i>نابلس</p>
+						<p class="en" style="display:none;"><i class="fa fa-map-marker" aria-hidden="true"></i>Nablus</p>
 						<a href="tel:+979092375620"><i class="fa fa-phone" aria-hidden="true"></i>09-2375620</a>
 						<a href="tel:+970597959527"><i class="fa fa-mobile" aria-hidden="true"></i>0597959527</a>
 					</li>
 					<li>
 						<p><i class="fa fa-map-marker" aria-hidden="true"></i>حوارة</p>
+						<p class="en" style="display:none;"><i class="fa fa-map-marker" aria-hidden="true"></i>Huwara</p>
 						<!-- <img src="/alghadeer/images/testImg.png"> -->
 						<a href="tel:+97909259005"><i class="fa fa-phone" aria-hidden="true"></i>09-2590055</a>
 						<a href="tel:+970597959556"><i class="fa fa-mobile" aria-hidden="true"></i>0597959556</a>
@@ -160,18 +195,21 @@
 					<li>
 						<!-- <img src="/alghadeer/images/testImg.png"> -->
 						<p><i class="fa fa-map-marker" aria-hidden="true"></i>جماعين</p>
+						<p class="en" style="display:none;"><i class="fa fa-map-marker" aria-hidden="true"></i>Jamma'in</p>
 						<a href="tel:+979092596569"><i class="fa fa-phone" aria-hidden="true"></i>09-2596569</a>
 						<a href="tel:+970597011535"><i class="fa fa-mobile" aria-hidden="true"></i>0597011535</a>
 					</li>
 					<li>
 						<!-- <img src="/alghadeer/images/testImg.png"> -->
 						<p><i class="fa fa-map-marker" aria-hidden="true"></i>عقربا</p>
+						<p class="en" style="display:none;"><i class="fa fa-map-marker" aria-hidden="true"></i>Aqraba</p>
 						<a href="tel:+979092375620"><i class="fa fa-phone" aria-hidden="true"></i>09-2598633</a>
 						<a href="tel:+970597959565"><i class="fa fa-mobile" aria-hidden="true"></i>0597959565</a>
 					</li>
 				</ul>
 				
 			</div>
+			
 			
 			<div class="swiper-container">
 				<div class="swiper">

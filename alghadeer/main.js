@@ -28,3 +28,16 @@ $(document).ready(function(){
 	});
 	
 });
+
+function displayEn(){
+	$('html').attr('dir', 'ltr');
+	$('.ar').hide();
+	$('.en').show();
+}
+
+
+function displayAr(){
+	$('html').attr('dir', 'rtl');
+	$('.en').hide();
+	$('.ar').show();
+}

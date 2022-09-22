@@ -1,0 +1,178 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+	
+
+</head>
+
+<body onload=display_ct();>
+
+<div class="main-container">
+	<div class="top-container">
+	<div class="main-image">
+		<!--image slider start-->
+    <div class="slider">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src='assets/main-img.png'>
+        </div>
+        <div class="slide">
+          <img src='assets/main-img2.png'>
+        </div>
+        <div class="slide">
+          <img src='assets/main-img.png'>
+        </div>
+        <div class="slide">
+          <img src='assets/main-img2.png'>
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!--automatic navigation end-->
+      </div>
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--manual navigation end-->
+    </div>
+    <!--image slider end-->
+
+		</div>
+		<div class="right-side">
+			<div class="date-section">
+				<div class="date day" id="today"> الاثنين</div>
+				<div class="date" id="date"> </div>
+				<div class="clear"></div>
+			</div>
+			<div class="yellow-section">
+				<h3 class="head">الغدير مراد للصرافة</h3>
+				<h4> أسعار العملات</h4>
+				
+				<table class="price-table">
+					<tr class="table-head">
+						<td>شراء</td><td>بيع</td><td style="border-color:black;">العملة</td>
+					</tr>
+					<tr class="table-body"><td><p id="usdToils" class="exch-price">3.4800</p></td><td><p id="ilsTousd" class="exch-price">3.4400</p></td><td>دولار-شيكل</td> </tr>
+					<tr class="table-body"><td><p id="jodToils" class="exch-price">4.9150</p></td><td><p id="ilsTojod" class="exch-price">4.8550</p></td><td>دينار-شيكل</td> </tr>
+					<tr class="table-body"><td><p id="euToils" class="exch-price">3.8750</p></td><td><p id="ilsToeu" class="exch-price">3.8350</p></td><td>يورو-شيكل</td> </tr>
+					<tr class="table-body"><td><p id="usdTojod" class="exch-price">0.7015</p></td><td><p id="jodTousd" class="exch-price">0.7075</p></td><td>دولار-دينار</td> </tr>
+					
+						
+								
+				</table>
+				<div class="branches">
+					<span> عقربا
+						
+						<a href="tel:+970597959565"><i class="fa fa-mobile" aria-hidden="true"></i>0597959565</a></span>
+					<span> جماعين
+						
+						<a href="tel:+970597011535"><i class="fa fa-mobile" aria-hidden="true"></i>0597011535</a></span>
+					<span> حوارة
+						
+						<a href="tel:+970597959556"><i class="fa fa-mobile" aria-hidden="true"></i>0597959556</a></span>
+					<span> نابلس
+						
+						<a href="tel:+970597959527"><i class="fa fa-mobile" aria-hidden="true"></i>0597959527</a></span>
+				</div>
+				</div>
+			</div>
+		</div>
+
+	
+	<div class="bottom-container">
+		<div class="time" id="time">
+
+		</div>
+		<div class="news"> 
+		<div class="marquee">اهلا وسهلا بكم في شركة زيتنا</div></div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+
+</body>
+
+	<script type="text/javascript">
+	
+		var today = new Date();
+		var date = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear()
+		document.getElementById("date").innerHTML = date;
+		const weekday = ["الاحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعة","السبت"];
+		document.getElementById("today").innerHTML = weekday[today.getDay()];
+		var counter = 1;
+		setInterval(function(){
+		  document.getElementById('radio' + counter).checked = true;
+		  counter++;
+		  if(counter > 4){
+			counter = 1;
+		  }
+		}, 5000);
+	
+		function display_c(){
+			var refresh=60000; // Refresh rate in milli seconds
+			mytime=setTimeout('display_ct()',refresh)
+			setValues();
+		}
+		
+		function display_ct() {
+			var today = new Date();
+			var hour = today.getHours().toLocaleString('en-US', {
+				minimumIntegerDigits: 2,
+				useGrouping: false
+			  });
+			  var minit = today.getMinutes().toLocaleString('en-US', {
+				minimumIntegerDigits: 2,
+				useGrouping: false
+			  });
+			var time = hour + ":" + minit;
+			document.getElementById("time").innerHTML = time;
+			display_c();
+		}
+		
+		function GetURLParameter(sParam){
+			var sPageURL = window.location.search.substring(1);
+			var sURLVariables = sPageURL.split('&');
+			var empty = "";
+			for (var i = 0; i < sURLVariables.length; i++) 
+			{
+				var sParameterName = sURLVariables[i].split('=');
+				if (sParameterName[0] == sParam) 
+				{
+					return sParameterName[1];
+				} 
+			}
+			return empty;
+		}
+		
+		function setValues(){
+			document.getElementById("usdToils").innerHTML = GetURLParameter("usdToils");
+			document.getElementById("ilsTousd").innerHTML = GetURLParameter("ilsTousd");
+			document.getElementById("jodToils").innerHTML = GetURLParameter("jodToils");
+			document.getElementById("ilsTojod").innerHTML = GetURLParameter("ilsTojod");
+			document.getElementById("euToils").innerHTML = GetURLParameter("euToils");
+			document.getElementById("ilsToeu").innerHTML = GetURLParameter("ilsToeu");
+			document.getElementById("usdTojod").innerHTML = GetURLParameter("usdTojod");
+			document.getElementById("jodTousd").innerHTML = GetURLParameter("jodTousd");
+			document.getElementById("usdToeu").innerHTML = GetURLParameter("usdToeu");
+			document.getElementById("euTousd").innerHTML = GetURLParameter("euTousd");
+		}
+
+			
+	</script>
+</html>

@@ -91,6 +91,8 @@ function getDataFromCookie(){
 }
 function copyNewURL(){
 	var originUrl = 'https://alfahim-group.com/office-screen/office-screen.html';
+	var originUrl2 = 'https://alfahim-group.com/zaytona-screen/zaytona-screen.html';
+	
 	var usdToils = document.getElementById("usd-ils").value;
 	setCookie("usd-ils", usdToils);
 	var ilsTousd = document.getElementById("ils-usd").value;
@@ -120,7 +122,14 @@ function copyNewURL(){
 	"&euTousd="+euTousd+
 	"&usdToeu="+usdToeu;
 	
-	document.getElementById("out-url").value = newUrl
+	var newUrl2 = originUrl2 + "?usdToils="+usdToils + "&ilsTousd="+ilsTousd+"&jodToils="+jodToils+"&ilsTojod="+ilsTojod+"&euToils="+euToils+
+	"&ilsToeu="+ilsToeu+
+	"&usdTojod="+usdTojod+
+	"&jodTousd="+jodTousd+
+	"&euTousd="+euTousd+
+	"&usdToeu="+usdToeu;
+	
+	document.getElementById("out-url").value = "For Alghadeer offices screens:%0d%0a "+newUrl + "%0d%0a --------------- --------------%0d%0a For Zaytona office screens: %0d%0a"+newUrl2 + "%0d%0a";
 	var outputUrl = document.getElementById("out-url");
 	outputUrl.select();
 	document.execCommand("copy");

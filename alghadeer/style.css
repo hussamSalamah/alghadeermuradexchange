@@ -315,3 +315,8 @@ body {
     font-size: 13px;
     padding-top: 2px;
 }
+
+.lang.en a{
+	text-decoration: none;
+	margin-top: 4px;
+}

@@ -16,9 +16,10 @@
 			    margin-bottom: 3px;
 				color: black;
 				display: inline-block;
-				width: 64px;
+				width: 50px;
 				border-left: black solid;
 				font-size: 8px;
+				font-weight: bold;
 			
 		}
 		

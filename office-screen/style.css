@@ -26,7 +26,7 @@
 		.bottom-container {background-color:white;position:relative;overflow:hidden;   height: 45px; border-top: black solid;}
 		.bottom-container .news {position: absolute; left: 0;  bottom: 0;direction:rtl;font-size: 25px;overflow: hidden;background-color: white;color: red;text-align: right;padding: 10px 30px; -webkit-animation: scrolling-left1 20s linear infinite;
   animation: scrolling-left1 20s linear infinite;}
-		.bottom-container .news .marquee {white-space: nowrap;}
+		.bottom-container .news .marquee {white-space: nowrap; width: 1000px;}
 	
 		@keyframes scrolling-left1 {
     0% {transform: translateX(-100%);

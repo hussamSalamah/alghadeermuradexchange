@@ -11,7 +11,17 @@
 		
 		.yellow-section {padding:10px; background-color:#F2D80F;text-align:center;}
 		.head { text-align:center;border-bottom:2px solid black;padding-bottom:10px; margin: 4px;}
-		.branches span {margin-bottom: 3px; background-color:black; color:white;display:inline-block; width:110px;}
+		
+		.branches span {
+			    margin-bottom: 3px;
+				color: black;
+				display: inline-block;
+				width: 64px;
+				border-left: black solid;
+				font-size: 8px;
+			
+		}
+		
 		.bottom-container .time {position:absolute;bottom:0; right:0;z-index:99999;float:right; padding:10px 30px; background-color:black; color:white;font-size:25px;}
 		.bottom-container {background-color:white;position:relative;overflow:hidden;   height: 45px; border-top: black solid;}
 		.bottom-container .news {position: absolute; left: 0;  bottom: 0;direction:rtl;font-size: 25px;overflow: hidden;background-color: white;color: red;text-align: right;padding: 10px 30px; -webkit-animation: scrolling-left1 20s linear infinite;
@@ -25,9 +35,9 @@
           -webkit-transform: translateX(100%);}
 }
 		
-		.price-table {margin: 0 auto;border-collapse: collapse;width: 100%;    text-align: center;border-left: 2px solid black;}
+		.price-table {margin: 0 auto;border-collapse: collapse;width: 100%;    text-align: center;border-left: 2px solid black; font-size: 10px;}
 		.price-table .table-head td {background-color:black; color:white;  font-weight:bold; padding:10px 20px;border-right: 1px solid white;}
-		.price-table .table-body td {background-color:white; color:bold;  font-weight:bold; padding:10px;border-right: 2px solid black;border-bottom:2px solid black;}
+		.price-table .table-body td {   font-weight:bold; padding:10px;border-right: 2px solid black;border-bottom:2px solid black;}
 		
 		
 

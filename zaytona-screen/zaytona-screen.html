@@ -109,7 +109,18 @@
 </body>
 
 	<script type="text/javascript">
-		readPrices('../prices.txt');
+		
+		var usdToils = 0;
+		var ilsTousd = 0;
+		var jodToils = 0;
+		var ilsTojod = 0;
+		var euToils = 0;
+		var ilsToeu = 0;
+		var usdTojod = 0;
+		var jodTousd = 0;
+		var usdToeu = 0;
+		var euTousd = 0;
+		
 		var today = new Date();
 		var date = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear()
 		document.getElementById("date").innerHTML = date;
@@ -126,7 +137,8 @@
 	
 		function display_c(){
 			var refresh=60000; // Refresh rate in milli seconds
-			mytime=setTimeout('display_ct()',refresh)
+			mytime=setTimeout('display_ct()',refresh);
+			readPrices('../prices.txt');
 			setValues();
 		}
 		
@@ -161,16 +173,16 @@
 		}
 		
 		function setValues(){
-			document.getElementById("usdToils").innerHTML = GetURLParameter("usdToils");
-			document.getElementById("ilsTousd").innerHTML = GetURLParameter("ilsTousd");
-			document.getElementById("jodToils").innerHTML = GetURLParameter("jodToils");
-			document.getElementById("ilsTojod").innerHTML = GetURLParameter("ilsTojod");
-			document.getElementById("euToils").innerHTML = GetURLParameter("euToils");
-			document.getElementById("ilsToeu").innerHTML = GetURLParameter("ilsToeu");
-			document.getElementById("usdTojod").innerHTML = GetURLParameter("usdTojod");
-			document.getElementById("jodTousd").innerHTML = GetURLParameter("jodTousd");
-			document.getElementById("usdToeu").innerHTML = GetURLParameter("usdToeu");
-			document.getElementById("euTousd").innerHTML = GetURLParameter("euTousd");
+			document.getElementById("usdToils").innerHTML = usdToils;
+			document.getElementById("ilsTousd").innerHTML = ilsTousd
+			document.getElementById("jodToils").innerHTML = jodToils;
+			document.getElementById("ilsTojod").innerHTML = ilsTojod;
+			document.getElementById("euToils").innerHTML = euToils;
+			document.getElementById("ilsToeu").innerHTML = ilsToeu;
+			document.getElementById("usdTojod").innerHTML = usdTojod;
+			document.getElementById("jodTousd").innerHTML = jodTousd;
+			document.getElementById("usdToeu").innerHTML = usdToeu;
+			document.getElementById("euTousd").innerHTML = euTousd;
 		}
 		
 		function readPrices(file) {
@@ -181,7 +193,17 @@
 			  if (rawFile.status === 200 || rawFile.status == 0) {
 				var allText = rawFile.responseText;
 				var json = JSON.parse(allText);
-				console.log(json.usdToils);
+				usdToils = json.usdToils;
+				ilsTousd = json.ilsTousd;
+				jodToils = json.jodToils;
+				ilsTojod = json.ilsTojod;
+				euToils = json.euToils;
+				ilsToeu = json.ilsToeu;
+				usdTojod = json.usdTojod;
+				jodTousd = json.jodTousd;
+				usdToeu = json.usdToeu;
+				euTousd = json.euTousd;
+				
 			  }
 			}
 		  }

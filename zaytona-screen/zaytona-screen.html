@@ -209,6 +209,19 @@
 		  }
 		  rawFile.send(null);
 		}
+		
+		
+
+function refreshAt1150() {
+    var now = new Date();
+    var millisTill1150 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 50, 0, 0) - now;
+    if (millisTill1150 < 0) {
+         millisTill1150 += 86400000; // it's after 11:50pm, try 11:50pm tomorrow.
+    }
+    setTimeout(function(){location.reload(true);}, millisTill1150);
+}
+
+refreshAt1150();
 
 
 			

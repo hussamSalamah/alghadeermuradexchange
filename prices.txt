@@ -1,1 +1,8 @@
-usd-ils=3.9
+{
+	//شراء              بيع
+	"usdToils": 3.80, "ilsTousd": 3.90,
+	"jodToils": 5.30, "ilsTojod": 5.35,
+	"euToils": 4.11,  "ilsToeu": 4.15,
+	"usdTojod": 0.777,"jodTousd": 1.42,
+	"usdToeu": 0.90,  "euTousd": 1.10
+}

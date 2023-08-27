@@ -1,5 +1,4 @@
 {
-	//شراء              بيع
 	"usdToils": 3.80, "ilsTousd": 3.90,
 	"jodToils": 5.30, "ilsTojod": 5.35,
 	"euToils": 4.11,  "ilsToeu": 4.15,

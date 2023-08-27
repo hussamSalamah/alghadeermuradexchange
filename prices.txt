@@ -1,5 +1,5 @@
 {
-	"bay3-sell ------- shera'-buy":0,
+	"بيع--------------------------شراء":"",
 	
 	"usdToils": 3.80, "ilsTousd": 3.90,
 	"jodToils": 5.30, "ilsTojod": 5.35,

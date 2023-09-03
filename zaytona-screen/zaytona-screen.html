@@ -138,7 +138,7 @@
 		function display_c(){
 			var refresh=60000; // Refresh rate in milli seconds
 			mytime=setTimeout('display_ct()',refresh);
-			readPrices('../prices.txt');
+			//readPrices('../prices.txt');
 			setValues();
 		}
 		
@@ -173,6 +173,19 @@
 		}
 		
 		function setValues(){
+			document.getElementById("usdToils").innerHTML = GetURLParameter("usdToils");
+			document.getElementById("ilsTousd").innerHTML = GetURLParameter("ilsTousd");
+			document.getElementById("jodToils").innerHTML = GetURLParameter("jodToils");
+			document.getElementById("ilsTojod").innerHTML = GetURLParameter("ilsTojod");
+			document.getElementById("euToils").innerHTML = GetURLParameter("euToils");
+			document.getElementById("ilsToeu").innerHTML = GetURLParameter("ilsToeu");
+			document.getElementById("usdTojod").innerHTML = GetURLParameter("usdTojod");
+			document.getElementById("jodTousd").innerHTML = GetURLParameter("jodTousd");
+			document.getElementById("usdToeu").innerHTML = GetURLParameter("usdToeu");
+			document.getElementById("euTousd").innerHTML = GetURLParameter("euTousd");
+		}
+		
+		function setValues2(){
 			document.getElementById("usdToils").innerHTML = usdToils;
 			document.getElementById("ilsTousd").innerHTML = ilsTousd
 			document.getElementById("jodToils").innerHTML = jodToils;
@@ -221,7 +234,7 @@ function refreshAt1150() {
     setTimeout(function(){location.reload(true);}, millisTill1150);
 }
 
-refreshAt1150();
+//refreshAt1150();
 
 
 			
